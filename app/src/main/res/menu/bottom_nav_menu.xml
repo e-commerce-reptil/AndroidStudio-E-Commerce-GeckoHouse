@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_utama"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/title_utama" />
+
+    <item
+        android:id="@+id/navigation_artikel"
+        android:icon="@drawable/ic_article_black_24dp"
+        android:title="@string/title_artikel" />
+    <item
+        android:id="@+id/navigation_scan"
+        android:icon="@drawable/ic_qr_code_scanner_black_24dp"
+        android:title="@string/title_scan" />
+
+    <item
+        android:id="@+id/navigation_akun"
+        android:icon="@drawable/ic_account_24dp"
+        android:title="@string/title_akun" />
+
+</menu>
