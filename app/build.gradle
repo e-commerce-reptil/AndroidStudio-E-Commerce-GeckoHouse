@@ -1,7 +1,9 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
-//    id 'kotlin-android-extensions'
+    id 'kotlin-android-extensions'
+//    id 'androidx.navigation.safeargs.kotlin'
+    id "io.codearte.nexus-staging" version "0.8.0"
 }
 
 android {
@@ -10,7 +12,7 @@ android {
 
     defaultConfig {
         applicationId "SH.myapplication"
-        minSdkVersion 26
+        minSdkVersion 28
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -37,7 +39,7 @@ android {
 }
 
 dependencies {
-
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.3.1'
     implementation 'androidx.appcompat:appcompat:1.2.0'
@@ -56,4 +58,22 @@ dependencies {
     implementation 'com.budiyev.android:code-scanner:2.1.0'
     //for permisions Camera
     implementation 'com.karumi:dexter:6.0.0'
+
+//    //noinspection GradleDependency
+//   implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+//    //noinspection GradleDependency
+//    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    //noinspection GradleCompatible
+    implementation 'com.android.support:support-core-utils:28.0.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.7.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.0'
+
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+//    implementation 'androidx.multidex:multidex:2.0.1'
+//    implementation "io.reactivex.rxjava3:rxkotlin:3.0.1"
+
+//    implementation "com.airbnb.android:lottie:$lottieVersion"
 }

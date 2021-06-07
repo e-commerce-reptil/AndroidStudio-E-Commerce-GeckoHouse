@@ -1,18 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="SH.myapplication">
-    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
+        android:fitsSystemWindows="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
+        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Reptile_Shop">
+        android:theme="@style/Theme.Reptile_Shop"
+        tools:replace="android:appComponentFactory"
+        android:windowSoftInputMode="adjustPan"
+        tools:node="replace">
+
+        <activity android:name=".SignInUp.SignActivity" />
         <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name">
+            android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,5 +31,4 @@
             </intent-filter>
         </activity>
     </application>
-
 </manifest>

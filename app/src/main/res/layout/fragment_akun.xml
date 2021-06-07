@@ -1,22 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="5dp"
     tools:context=".ui.akun.AkunFragment">
 
     <TextView
-        android:id="@+id/text_akun"
+        android:id="@+id/infoperson"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:text="Informasi Personal"
+        android:textColor="@color/forest_green"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/infonama"
+        android:layout_below="@+id/infoperson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/infotelpn"
+        android:layout_below="@+id/infonama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No. Telp / HP"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/infokeamanan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/infotelpn"
+        android:layout_marginTop="20dp"
+        android:text="Keamanan"
+        android:textColor="@color/forest_green"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/TvEmail"
+        android:layout_below="@+id/infokeamanan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/TvPassword"
+        android:layout_below="@+id/TvEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/infolainnya"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TvPassword"
+        android:layout_marginTop="20dp"
+        android:text="Lainnya"
+        android:textColor="@color/forest_green"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/TvQrcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/infolainnya"
+        android:text="Cetak QR-Code"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/id1"
+        android:layout_below="@+id/TvQrcode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <ImageView
+        android:id="@+id/TvImg"
+        android:layout_below="@+id/TvQrcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_logout_black_24dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/TvKeluar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Keluar"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+    </LinearLayout>
+
+
+</RelativeLayout>
