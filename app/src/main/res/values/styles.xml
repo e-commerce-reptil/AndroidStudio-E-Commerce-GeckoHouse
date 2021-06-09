@@ -95,4 +95,8 @@
         <item name="android:strokeColor">?attr/colorPrimary</item>
         <item name="strokeColor">?attr/colorPrimary</item>
     </style>
+
+    <style name="SeekBarTheme">
+        <item name="colorAccent">@color/white</item>
+    </style>
 </resources>

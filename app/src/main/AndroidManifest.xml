@@ -4,7 +4,7 @@
     package="SH.myapplication">
 
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -21,10 +21,11 @@
         android:windowSoftInputMode="adjustPan"
         tools:node="replace"
         tools:replace="android:appComponentFactory">
+        <activity android:name=".TentangAplikasiActivity"></activity>
         <activity
-            android:name=".CetakQrActivity"
+            android:name=".MenuAkun.CetakQrActivity"
             android:label="@string/title_activity_cetak_qr"
-            android:theme="@style/Theme.Reptile_Shop.NoActionBar"></activity>
+            android:theme="@style/Theme.Reptile_Shop.NoActionBar" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

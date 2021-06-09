@@ -1,4 +1,4 @@
-package SH.myapplication
+package SH.myapplication.MenuAkun
 
 import android.Manifest
 import android.app.Activity

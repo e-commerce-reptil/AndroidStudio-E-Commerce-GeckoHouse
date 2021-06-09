@@ -17,10 +17,32 @@
         app:frameAspectRatioHeight="1"
         app:frameAspectRatioWidth="1"
         app:frameColor="@color/forest_green"
-        app:frameCornersRadius="10dp"
+        app:frameCornersRadius="20dp"
         app:frameCornersSize="55dp"
         app:frameSize="0.60"
         app:frameThickness="6dp"
         app:maskColor="#77000000" />
+
+<!--    <ImageView-->
+<!--        android:id="@+id/button_decrease_zoom"-->
+<!--        android:layout_marginLeft="60dip"-->
+<!--        android:layout_width="28dp"-->
+<!--        android:layout_height="28dp"-->
+<!--        android:layout_gravity="left||bottom" />-->
+
+<!--    <SeekBar-->
+<!--        android:id="@+id/seek_bar_zoom"-->
+<!--        android:layout_width="200dp"-->
+<!--        android:layout_height="73dp"-->
+<!--        android:layout_gravity="center||bottom"-->
+<!--        android:layout_marginHorizontal="@dimen/default_margin_small"-->
+<!--        android:theme="@style/SeekBarTheme" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/button_increase_zoom"-->
+<!--        android:layout_marginRight="59dip"-->
+<!--        android:layout_width="28dp"-->
+<!--        android:layout_height="28dp"-->
+<!--        android:layout_gravity="right||bottom"/>-->
 
 </FrameLayout>

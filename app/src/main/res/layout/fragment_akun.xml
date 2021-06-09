@@ -3,104 +3,290 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
     tools:context=".Fragments.AkunFragment">
 
-    <TextView
-        android:id="@+id/infoperson"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Informasi Personal"
-        android:textColor="@color/forest_green"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/infonama"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/infoperson"
-        android:text="Nama"
-        android:textColor="@color/black"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/infotelpn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/infonama"
-        android:text="No. Telp / HP"
-        android:textColor="@color/black"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/infokeamanan"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/infotelpn"
-        android:layout_marginTop="20dp"
-        android:text="Keamanan"
-        android:textColor="@color/forest_green"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/TvEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/infokeamanan"
-        android:text="Email"
-        android:textColor="@color/black"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/TvPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/TvEmail"
-        android:text="Password"
-        android:textColor="@color/black"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/infolainnya"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/TvPassword"
-        android:layout_marginTop="20dp"
-        android:text="Lainnya"
-        android:textColor="@color/forest_green"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/TvQrcode"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/infolainnya"
-        android:text="Cetak QR-Code"
-        android:textColor="@color/black"
-        android:textStyle="bold" />
-
     <LinearLayout
-        android:id="@+id/id1"
-        android:layout_width="match_parent"
+        android:id="@+id/itemperson"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/TvQrcode"
+        android:layout_marginTop="10dp"
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/TvImg"
+            android:id="@+id/Infimgperson"
+            android:src="@drawable/ic_account_circle_green_48dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/TvQrcode"
-            android:src="@drawable/ic_logout_black_24dp"
-            android:textColor="@color/black"
-            android:textStyle="bold" />
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/Tvperson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Pembeli"
+                android:textColor="@color/black"
+                android:layout_marginTop="6dp"/>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_verified_black_18dp"
+        />
+            <TextView
+                android:id="@+id/Inffreeaccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Free Account"
+                android:layout_marginLeft="1dp"
+                android:textSize="12dp"/>
+</LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/item1"
+        android:layout_below="@+id/itemperson"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <TextView
-            android:id="@+id/TvKeluar"
+            android:id="@+id/Infperson"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Informasi Personal"
+            android:textColor="@color/forest_green"
+            android:layout_marginTop="10dp"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/Infnama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nama"
+            android:textColor="@color/black"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:id="@+id/Tvnama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama"
+            android:textSize="12dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_below="@+id/item1"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        android:background="@color/Light_gray"/>
+    <LinearLayout
+        android:layout_below="@+id/line1"
+        android:id="@+id/item2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/Inftelponhp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No. Telp / HP"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/Tvtelponhp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Telp/HP"
+            android:textSize="12dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/line2"
+        android:layout_below="@+id/item2"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        android:background="@color/Light_gray"/>
+    <LinearLayout
+        android:layout_below="@+id/line2"
+        android:id="@+id/item3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/Infalamat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alamat"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/Tvalamat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alamat"
+            android:textSize="12dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/line3"
+        android:layout_below="@+id/item3"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        android:background="@color/Light_gray"/>
+    <LinearLayout
+        android:layout_below="@+id/line3"
+        android:id="@+id/item4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/Infkeamanan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Keamanan"
+            android:textColor="@color/forest_green"
+            android:textSize="16dp"/>
+
+        <TextView
+            android:id="@+id/Infemail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="email"
+            android:textColor="@color/black"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:id="@+id/Tvemail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="email"
+            android:textSize="12dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/line4"
+        android:layout_below="@+id/item4"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        android:background="@color/Light_gray"/>
+    <LinearLayout
+        android:layout_below="@+id/line4"
+        android:id="@+id/item5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/Infpassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/Tvpassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textSize="12dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/line5"
+        android:layout_below="@+id/item5"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        android:background="@color/Light_gray"/>
+    <LinearLayout
+        android:layout_below="@+id/line5"
+        android:id="@+id/item6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/Inflainnya"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lainnya"
+            android:textColor="@color/forest_green"
+            android:textSize="16dp"/>
+
+        <TextView
+            android:id="@+id/Tvcetakqr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cetak QR Code"
+            android:textColor="@color/black"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/line6"
+        android:layout_below="@+id/item6"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical"
+        android:background="@color/Light_gray"/>
+    <LinearLayout
+        android:layout_below="@+id/line6"
+        android:id="@+id/item7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/Tvtentangaplikasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tentang Aplikasi"
+            android:textColor="@color/black"
+            android:layout_marginBottom="10dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/line7"
+        android:layout_below="@+id/item7"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        android:background="@color/Light_gray"/>
+    <LinearLayout
+        android:layout_below="@+id/line7"
+        android:id="@+id/item8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/Infimg"
+            android:src="@drawable/ic_logout_black_24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/Tvkeluar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Keluar"
-            android:textColor="@color/black"
-            android:textStyle="bold" />
+            android:textColor="@color/black"/>
     </LinearLayout>
-
 </RelativeLayout>

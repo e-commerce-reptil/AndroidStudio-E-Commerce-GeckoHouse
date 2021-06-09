@@ -44,4 +44,7 @@
 
     <!--colros for card-->
     <color name="whiteCardColor">#fff</color>
+
+
+    <color name="Light_gray">#ADACAC</color>
 </resources>
