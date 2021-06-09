@@ -1,4 +1,4 @@
-package SH.myapplication.ui.scan
+package SH.myapplication.Fragments
 
 import SH.myapplication.R
 import android.os.Bundle

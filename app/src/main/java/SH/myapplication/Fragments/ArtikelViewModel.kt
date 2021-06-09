@@ -1,4 +1,4 @@
-package SH.myapplication.ui.artikel
+package SH.myapplication.Fragments
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

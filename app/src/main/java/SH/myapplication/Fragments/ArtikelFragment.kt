@@ -1,6 +1,6 @@
-package SH.myapplication.ui.akun
+package SH.myapplication.Fragments
 
-import SH.myapplication.databinding.FragmentAkunBinding
+import SH.myapplication.databinding.FragmentArtikelBinding
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,10 +10,10 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 
-class AkunFragment : Fragment() {
+class ArtikelFragment : Fragment() {
 
-    private lateinit var akunViewModel: AkunViewModel
-    private var _binding: FragmentAkunBinding? = null
+    private lateinit var artikelViewModel: ArtikelViewModel
+    private var _binding: FragmentArtikelBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -24,14 +24,14 @@ class AkunFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        akunViewModel =
-            ViewModelProvider(this).get(AkunViewModel::class.java)
+        artikelViewModel =
+            ViewModelProvider(this).get(ArtikelViewModel::class.java)
 
-        _binding = FragmentAkunBinding.inflate(inflater, container, false)
+        _binding = FragmentArtikelBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textAkun
-        akunViewModel.text.observe(viewLifecycleOwner, Observer {
+        val textView: TextView = binding.textArtikel
+        artikelViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root

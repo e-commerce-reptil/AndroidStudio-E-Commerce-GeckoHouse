@@ -1,6 +1,6 @@
-package SH.myapplication.ui.artikel
+package SH.myapplication.Fragments
 
-import SH.myapplication.databinding.FragmentArtikelBinding
+import SH.myapplication.databinding.FragmentUtamaBinding
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,10 +10,10 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 
-class ArtikelFragment : Fragment() {
+class UtamaFragment : Fragment() {
 
-    private lateinit var artikelViewModel: ArtikelViewModel
-    private var _binding: FragmentArtikelBinding? = null
+    private lateinit var utamaViewModel: UtamaViewModel
+    private var _binding: FragmentUtamaBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -24,14 +24,14 @@ class ArtikelFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        artikelViewModel =
-            ViewModelProvider(this).get(ArtikelViewModel::class.java)
+        utamaViewModel =
+            ViewModelProvider(this).get(UtamaViewModel::class.java)
 
-        _binding = FragmentArtikelBinding.inflate(inflater, container, false)
+        _binding = FragmentUtamaBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textArtikel
-        artikelViewModel.text.observe(viewLifecycleOwner, Observer {
+        val textView: TextView = binding.textUtama
+        utamaViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root

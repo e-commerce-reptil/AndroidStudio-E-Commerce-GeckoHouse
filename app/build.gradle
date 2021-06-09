@@ -4,6 +4,9 @@ plugins {
     id 'kotlin-android-extensions'
 //    id 'androidx.navigation.safeargs.kotlin'
     id "io.codearte.nexus-staging" version "0.8.0"
+//    id 'com.android.library'
+//    id 'com.jfrog.bintray'
+//    id 'com.github.dcendents.android-maven'
 }
 
 android {
@@ -76,4 +79,9 @@ dependencies {
 //    implementation "io.reactivex.rxjava3:rxkotlin:3.0.1"
 
 //    implementation "com.airbnb.android:lottie:$lottieVersion"
+
+    //For CreateCodeQr
+//    implementation project(':QRGenearator')
+    implementation 'androidmads.library.qrgenearator:QRGenearator:1.0.3'
+    implementation 'com.google.zxing:core:3.2.0'
 }
