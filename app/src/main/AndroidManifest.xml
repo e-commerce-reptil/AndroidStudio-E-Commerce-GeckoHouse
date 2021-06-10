@@ -2,8 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="SH.myapplication">
-
+    <!-- Dangerous permissions -->
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -21,8 +23,14 @@
         android:windowSoftInputMode="adjustPan"
         tools:node="replace"
         tools:replace="android:appComponentFactory">
-        <activity android:name=".MenuAkun.TentangAplikasiActivity"></activity>
-        <activity android:name=".MenuAkun.CetakQrActivity"></activity>
+        <activity android:name=".BarcodeImageActivity"></activity>
+        <activity android:name=".CreateQRCodeActivity" />
+        <activity
+            android:name=".BuatQRBarcodeActivity"
+            android:label="@string/title_activity_buat_qrbarcode"
+            android:theme="@style/Theme.Reptile_Shop.NoActionBar" />
+        <activity android:name=".MenuAkun.TentangAplikasiActivity" />
+        <activity android:name=".MenuAkun.CetakQrActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
