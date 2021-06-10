@@ -9,7 +9,7 @@
     android:layout_marginTop="@dimen/loginViewsMargin"
     android:layout_marginBottom="@dimen/loginViewsMargin"
     android:background="@color/whiteCardColor"
-    tools:context="ui.SignInUp.SignUpFragment"
+    tools:context=".SignInUp.SignUpFragment"
     android:id="@+id/signup_fragment">
 
     <LinearLayout
