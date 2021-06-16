@@ -57,8 +57,11 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
+
+    implementation 'com.github.kenglxn.qrgen:android:2.6.0'
+
     //for code-scanner
-    implementation 'com.budiyev.android:code-scanner:2.1.0'
+    implementation 'com.budiyev.android:code-scanner:2.+'
     //for permisions Camera
     implementation 'com.karumi:dexter:6.0.0'
 
@@ -83,5 +86,17 @@ dependencies {
     //For CreateCodeQr
 //    implementation project(':QRGenearator')
     implementation 'androidmads.library.qrgenearator:QRGenearator:1.0.3'
-    implementation 'com.google.zxing:core:3.2.0'
+
+    implementation 'com.google.zxing:core:3.4.0'
+    implementation 'com.journeyapps:zxing-android-embedded:4.0.2'
+
+    // Rx
+    implementation "io.reactivex.rxjava2:rxkotlin:2.3.0"
+    implementation "com.jakewharton.rxbinding2:rxbinding-appcompat-v7-kotlin:2.2.0"
+
+    // Image Crop Library
+    implementation 'com.isseiaoki:simplecropview:1.1.8'
+
+    // Date time picker
+    implementation 'com.github.florent37:singledateandtimepicker:2.2.6'
 }

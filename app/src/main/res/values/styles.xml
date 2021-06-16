@@ -193,13 +193,6 @@
             <item name="android:background">@color/delimiter_color2</item>
         </style>
 
-        <style name="BaseAppBarLayoutStyle">
-            <item name="android:layout_width">match_parent</item>
-            <item name="android:layout_height">wrap_content</item>
-            <item name="liftOnScroll">true</item>
-            <item name="liftOnScrollTargetViewId">@id/scroll_view</item>
-        </style>
-
         <style name="ScrollStyle">
             <item name="android:layout_width">match_parent</item>
             <item name="android:layout_height">match_parent</item>
@@ -227,8 +220,4 @@
             <item name="android:colorBackground">@color/dialog_background_color</item>
             <item name="colorAccent">@color/color_accent</item>
         </style>
-
-    <style name="AppBarLayoutStyle" parent="BaseAppBarLayoutStyle">
-        <item name="liftOnScroll">false</item>
-    </style>
 </resources>

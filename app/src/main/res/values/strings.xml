@@ -22,4 +22,15 @@
     <string name="enter_text">Enter Text</string>
     <string name="value_required">Value Required</string>
     <string name="title_activity_buat_qrbarcode">BuatQRBarcodeActivity</string>
+
+    <!--Barcode image activity-->
+    <string name="activity_barcode_image_increase_brightness">Increase brightness</string>
+    <string name="activity_barcode_image_decrease_brightness">Decrease brightness</string>
+    <string name="activity_barcode_print">Print</string>
+    <string name="activity_barcode_delete">Delete</string>
+
+
+    <!--Create barcode activity-->
+    <string name="activity_create_barcode_menu_item_title">Create</string>
+    <string name="activity_create_barcode_contacts_menu_item_title">Contacts</string>
 </resources>

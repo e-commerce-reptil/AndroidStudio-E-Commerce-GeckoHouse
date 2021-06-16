@@ -20,6 +20,8 @@ allprojects {
         google()
         mavenCentral()
         jcenter()
+        //for import net.glxn.qrgen.core.scheme.VCard
+        maven { url "https://jitpack.io" }
     }
 }
 

@@ -10,12 +10,15 @@
         android:orientation="vertical"
         tools:context=".CreateQRCodeActivity">
 
+
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             style="@style/TextInputLayoutStyle"
+            android:visibility="visible"
             >
+
             <EditText
                 android:id="@+id/edit_text_morph"
                 android:layout_width="match_parent"
@@ -25,7 +28,7 @@
                 android:maxLines="1"
                 android:hint="Morp"
                 android:imeOptions="actionNext"
-                android:inputType="textEmailAddress"
+                android:inputType="text"
                 />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -34,6 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/default_margin_small"
             style="@style/TextInputLayoutStyle"
+            android:visibility="visible"
             >
 
             <EditText
@@ -43,7 +47,7 @@
                 android:gravity="start|top"
                 android:hint="Parent"
                 android:imeOptions="actionNext"
-                android:inputType="textEmailSubject"
+                android:inputType="text"
                 android:lines="1"
                 android:maxLines="1" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -53,6 +57,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/default_margin_small"
             style="@style/TextInputLayoutStyle"
+            android:visibility="visible"
             >
             <EditText
                 android:id="@+id/edit_text_dob"
@@ -73,6 +78,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/default_margin_small"
             style="@style/TextInputLayoutStyle"
+            android:visibility="visible"
             >
             <EditText
                 android:id="@+id/edit_text_sex"
@@ -85,16 +91,36 @@
                 android:inputType="text"
                 android:imeOptions="actionDone"
                 />
+
+            <Button
+                android:id="@+id/btn_generateQR"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="10dp"
+                android:text="Generate QR Code"
+                android:textAllCaps="false"
+                android:visibility="visible"/>
         </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
-            android:id="@+id/generate_barcode"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="15dp"
-            android:layout_weight="1"
-            android:lines="1"
-            android:maxLines="1"
-            android:text="@string/generate" />
+    <ImageView
+        android:id="@+id/imageView_qrCode"
+        android:layout_gravity="center"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        />
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Save to gallery"
+        android:textAllCaps="false"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
     </LinearLayout>
