@@ -98,4 +98,8 @@
     <color name="green">#46CC47</color>
     <color name="red">#FB2A2D</color>
     <color name="orange">#FF9700</color>
+<!--Splash-->
+    <color name="colorPrimary">#00cab7</color>
+    <color name="colorPrimaryDark">#00a798</color>
+    <color name="colorAccent">#ff114d</color>
 </resources>

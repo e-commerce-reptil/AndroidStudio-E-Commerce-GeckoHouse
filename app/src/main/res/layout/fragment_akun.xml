@@ -9,7 +9,7 @@
 
     <LinearLayout
         android:id="@+id/itemperson"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:orientation="horizontal">
@@ -21,12 +21,12 @@
             android:layout_height="wrap_content"/>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <TextView
                 android:id="@+id/Tvperson"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Nama Pembeli"
                 android:textColor="@color/black"
@@ -43,7 +43,7 @@
         />
             <TextView
                 android:id="@+id/Inffreeaccount"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Free Account"
                 android:layout_marginLeft="1dp"
@@ -76,7 +76,7 @@
             android:layout_marginTop="5dp"/>
         <TextView
             android:id="@+id/Tvnama"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Nama"
             android:textSize="12dp"/>
@@ -99,7 +99,7 @@
 
         <TextView
             android:id="@+id/Inftelponhp"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="No. Telp / HP"
             android:textColor="@color/black"/>
@@ -128,13 +128,13 @@
 
         <TextView
             android:id="@+id/Infalamat"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Alamat"
             android:textColor="@color/black"/>
         <TextView
             android:id="@+id/Tvalamat"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Alamat"
             android:textSize="12dp"/>
@@ -164,14 +164,14 @@
 
         <TextView
             android:id="@+id/Infemail"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="email"
             android:textColor="@color/black"
             android:layout_marginTop="5dp"/>
         <TextView
             android:id="@+id/Tvemail"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="email"
             android:textSize="12dp"/>
@@ -194,13 +194,13 @@
 
         <TextView
             android:id="@+id/Infpassword"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Password"
             android:textColor="@color/black"/>
         <TextView
             android:id="@+id/Tvpassword"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Password"
             android:textSize="12dp"/>
@@ -230,12 +230,15 @@
 
         <TextView
             android:id="@+id/Tvcetakqr"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Cetak QR Code"
             android:textColor="@color/black"
             android:layout_marginBottom="10dp"
-            android:layout_marginTop="5dp"/>
+            android:layout_marginTop="5dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:attr/selectableItemBackground"/>
     </LinearLayout>
     <LinearLayout
         android:id="@+id/line6"
@@ -254,7 +257,7 @@
         android:orientation="vertical">
         <TextView
             android:id="@+id/Tvtentangaplikasi"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Tentang Aplikasi"
             android:textColor="@color/black"
@@ -272,7 +275,7 @@
     <LinearLayout
         android:layout_below="@+id/line7"
         android:id="@+id/item8"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
@@ -284,7 +287,7 @@
 
         <TextView
             android:id="@+id/Tvkeluar"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Keluar"
             android:textColor="@color/black"/>

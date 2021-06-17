@@ -32,10 +32,14 @@
             android:theme="@style/Theme.Reptile_Shop.NoActionBar" />
         <activity android:name=".MenuAkun.TentangAplikasiActivity" />
         <activity android:name=".MenuAkun.CetakQrActivity" />
+        <activity
+            android:name=".Splash.SplashActivity"
+            android:theme="@style/AppTheme.NoActionBar.TranslucentStatusBar"
+            android:windowSoftInputMode="adjustPan" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
+                <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

@@ -3,21 +3,24 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="@dimen/default_margin_small"
-        android:paddingHorizontal="@dimen/default_margin"
-        android:paddingBottom="@dimen/default_margin"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         tools:context=".CreateQRCodeActivity">
 
-
+    <LinearLayout
+        android:id="@+id/layout_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/default_margin_small"
+        android:paddingHorizontal="@dimen/default_margin"
+        android:paddingBottom="@dimen/default_margin"
+        android:visibility="visible">
         <com.google.android.material.textfield.TextInputLayout
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            style="@style/TextInputLayoutStyle"
-            android:visibility="visible"
-            >
+            style="@style/TextInputLayoutStyle">
 
             <EditText
                 android:id="@+id/edit_text_morph"
@@ -31,14 +34,11 @@
                 android:inputType="text"
                 />
         </com.google.android.material.textfield.TextInputLayout>
-
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/default_margin_small"
-            style="@style/TextInputLayoutStyle"
-            android:visibility="visible"
-            >
+            style="@style/TextInputLayoutStyle">
 
             <EditText
                 android:id="@+id/edit_text_parent"
@@ -51,14 +51,11 @@
                 android:lines="1"
                 android:maxLines="1" />
         </com.google.android.material.textfield.TextInputLayout>
-
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/default_margin_small"
-            style="@style/TextInputLayoutStyle"
-            android:visibility="visible"
-            >
+            style="@style/TextInputLayoutStyle">
             <EditText
                 android:id="@+id/edit_text_dob"
                 android:layout_width="match_parent"
@@ -71,15 +68,11 @@
                 android:imeOptions="actionDone"
                 />
         </com.google.android.material.textfield.TextInputLayout>
-
-
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/default_margin_small"
-            style="@style/TextInputLayoutStyle"
-            android:visibility="visible"
-            >
+            style="@style/TextInputLayoutStyle">
             <EditText
                 android:id="@+id/edit_text_sex"
                 android:layout_width="match_parent"
@@ -91,36 +84,91 @@
                 android:inputType="text"
                 android:imeOptions="actionDone"
                 />
-
-            <Button
-                android:id="@+id/btn_generateQR"
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:layout_marginTop="10dp"
-                android:text="Generate QR Code"
-                android:textAllCaps="false"
-                android:visibility="visible"/>
         </com.google.android.material.textfield.TextInputLayout>
-
-    <ImageView
-        android:id="@+id/imageView_qrCode"
-        android:layout_gravity="center"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:layout_marginBottom="2dp"
-        android:layout_marginTop="2dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:visibility="gone"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
-        />
-    <Button
-        android:id="@+id/btn_save"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="Save to gallery"
-        android:textAllCaps="false"
-        android:layout_gravity="center"
-        android:visibility="gone"/>
+        <Button
+            android:id="@+id/btn_generateQR"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="10dp"
+            android:text="Generate QR Code"
+            android:textAllCaps="false"/>
     </LinearLayout>
+    <LinearLayout
+        android:id="@+id/output_generate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <ImageView
+            android:id="@+id/imageView_qrCode"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+<!--        <TextView-->
+<!--            android:drawableLeft="@drawable/ic_delete"-->
+<!--            android:id="@+id/Tv_Delete"-->
+<!--            android:paddingHorizontal="16dp"-->
+<!--            android:paddingVertical="12dp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center_vertical"-->
+<!--            android:text="   Delete"-->
+<!--            android:textSize="16dp"-->
+<!--            android:ellipsize="end"-->
+<!--            android:clickable="true"-->
+<!--            android:focusable="true"-->
+<!--            android:background="?android:attr/selectableItemBackground"-->
+<!--            android:textColor="@color/color_icon_button_icon_and_text"/>-->
+        <TextView
+            android:drawableLeft="@drawable/ic_share"
+            android:id="@+id/Tv_Shareasimage"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="   Share as image"
+            android:textSize="16dp"
+            android:layout_gravity="center_vertical"
+            android:ellipsize="end"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@color/color_icon_button_icon_and_text"/>
+        <TextView
+            android:drawableLeft="@drawable/ic_save"
+            android:id="@+id/Tv_Saveasimage"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="   Save as image"
+            android:textSize="16dp"
+            android:layout_gravity="center_vertical"
+            android:ellipsize="end"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@color/color_icon_button_icon_and_text"/>
+        <TextView
+            android:drawableLeft="@drawable/ic_print"
+            android:id="@+id/Tv_Print"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="   Print"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="12dp"
+            android:textSize="16dp"
+            android:layout_gravity="center_vertical"
+            android:ellipsize="end"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@color/color_icon_button_icon_and_text"/>
+    </LinearLayout>
+</LinearLayout>

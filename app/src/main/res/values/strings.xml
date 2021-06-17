@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Gecko House</string>
+    <string name="Welcome">Welcome</string>
+    <string name="powered_by">Gecko House</string>
     <string name="title_utama">Utama</string>
     <string name="title_artikel">Artikel</string>
     <string name="title_akun">Akun</string>
@@ -33,4 +35,6 @@
     <!--Create barcode activity-->
     <string name="activity_create_barcode_menu_item_title">Create</string>
     <string name="activity_create_barcode_contacts_menu_item_title">Contacts</string>
+    <!--Create Button-->
+    <string name="activity_barcode_copy">Copy to clipboard</string>
 </resources>

@@ -2,13 +2,16 @@ package SH.myapplication
 
 import SH.myapplication.DataClass.SchemaData
 import android.Manifest
+import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.net.Uri
+import android.opengl.Visibility
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Environment
+import android.view.Menu
 import android.view.View
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
@@ -17,6 +20,7 @@ import com.budiyev.android.codescanner.BarcodeUtils.encodeBitmap
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.qrcode.encoder.QRCode
 import com.journeyapps.barcodescanner.BarcodeEncoder
+import io.reactivex.Completable
 import kotlinx.android.synthetic.main.activity_create_qrcode.*
 import java.io.File
 import java.io.FileOutputStream
@@ -26,10 +30,12 @@ class CreateQRCodeActivity : AppCompatActivity(), View.OnClickListener {
     private var qrImage: Bitmap? = null
     val EXTERNAL_STORAGE_PERMISSION_REQUEST_CODE = 1
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_qrcode)
-        btn_save.setOnClickListener(this)
+
+        Tv_Saveasimage.setOnClickListener(this)
         btn_generateQR.setOnClickListener(this)
 
 
@@ -56,7 +62,7 @@ class CreateQRCodeActivity : AppCompatActivity(), View.OnClickListener {
                     generateQRCode()
                 }
             }
-            R.id.btn_save-> {
+            R.id.Tv_Saveasimage-> {
                 if (!checkPermissionForExternalStorage()) {
                     Toast.makeText(this, "Diperlukan izin Penyimpanan Eksternal. Harap izinkan di Pengaturan Aplikasi untuk fungsionalitas tambahan.", Toast.LENGTH_LONG).show()
                 }
@@ -67,6 +73,7 @@ class CreateQRCodeActivity : AppCompatActivity(), View.OnClickListener {
             }
         }
     }
+
     fun generateQRCode()
     {   val Generate = SchemaData(edit_text_morph.text.toString())
         .setParent(edit_text_parent.text.toString())
@@ -78,8 +85,9 @@ class CreateQRCodeActivity : AppCompatActivity(), View.OnClickListener {
         if(qrImage != null)
         {
             imageView_qrCode.setImageBitmap(qrImage)
-            imageView_qrCode.visibility = View.VISIBLE
-            btn_save.visibility = View.VISIBLE
+            layout_data.visibility = View.GONE
+            output_generate.visibility = View.VISIBLE
+
         }
     }
     //function for requesting storage access
@@ -104,7 +112,7 @@ class CreateQRCodeActivity : AppCompatActivity(), View.OnClickListener {
     fun saveImage(image: Bitmap): String {
         var savedImagePath: String? = null
 
-        var imageFileName = "QR" + getTimeStamp() + ".jpg"
+        var imageFileName = "QR-DATA-GECKO" + getTimeStamp() + ".jpg"
         var storageDir = File(
             Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES), "/QRGenerator")
         var success = true
@@ -116,7 +124,7 @@ class CreateQRCodeActivity : AppCompatActivity(), View.OnClickListener {
             savedImagePath = imageFile.getAbsolutePath()
             try {
                 var fOut = FileOutputStream(imageFile)
-                image.compress(Bitmap.CompressFormat.JPEG, 100, fOut)
+                image.compress(Bitmap.CompressFormat.PNG, 100, fOut)
                 fOut.close()
             } catch (e: java.lang.Exception) {
                 e.printStackTrace()
@@ -142,4 +150,10 @@ class CreateQRCodeActivity : AppCompatActivity(), View.OnClickListener {
 
         return ts
     }
+    // Call infiate toolbar menu to Main Activity
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val m_delete = menuInflater.inflate(R.menu.delete_menu, menu )
+        return true
+    }
+
 }

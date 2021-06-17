@@ -4,14 +4,12 @@ import SH.myapplication.Fragments.AkunFragment
 import SH.myapplication.Fragments.ArtikelFragment
 import SH.myapplication.Fragments.ScanFragment
 import SH.myapplication.Fragments.UtamaFragment
+import SH.myapplication.Splash.SplashScreenBuilder
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
-import SH.myapplication.databinding.ActivityMainBinding
+import android.app.Activity
+import android.content.Intent
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
@@ -35,6 +33,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        startSplashScreen()
 
         // Call fragment from bottom navigation view
         val firstFragment = UtamaFragment()
@@ -72,5 +71,27 @@ class MainActivity : AppCompatActivity() {
             return true
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    //Splash
+    private fun startSplashScreen() {
+        SplashScreenBuilder.getInstance(this)
+            .setVideo(R.raw.splash_animation)
+            .setVideoDark(R.raw.splash_animation_dark)
+            .setImage(R.drawable.app_icon)
+            .setTitle(R.string.Welcome)
+            .setSubtitle(R.string.app_name)
+            .show()
+    }
+    //Splash
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == SplashScreenBuilder.SPLASH_SCREEN_FINISHED) {
+            if (resultCode == Activity.RESULT_OK) {
+                Toast.makeText(this, "Welcome", Toast.LENGTH_SHORT).show()
+            } else if (resultCode == Activity.RESULT_CANCELED) {
+                Toast.makeText(this, "SplashScreen finished, but canceled", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 }
